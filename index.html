@@ -4,219 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #2c3e50;
-            color: #ecf0f1;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        /* セクション共通スタイル */
-        section {
-            margin-bottom: 80px;
-        }
-
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #ecf0f1;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        /* 自己紹介セクション */
-        .profile-section {
-            text-align: center;
-        }
-
-        .profile-icon {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: #34495e;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            margin-bottom: 30px;
-            border: 3px solid #7f8c8d;
-        }
-
-        .profile-text h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-            font-weight: 300;
-            color: #ecf0f1;
-        }
-
-        .profile-text .subtitle {
-            color: #95a5a6;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .profile-text p {
-            color: #bdc3c7;
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        /* プロジェクトセクション */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .project-card {
-            background: #34495e;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: #2c3e50;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            border-bottom: 1px solid #7f8c8d;
-        }
-
-        .project-content {
-            padding: 25px;
-        }
-
-        .project-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-            font-weight: 400;
-            color: #ecf0f1;
-        }
-
-        .project-dropdown {
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .dropdown-toggle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            color: #95a5a6;
-            font-size: 14px;
-            border-top: 1px solid #7f8c8d;
-        }
-
-        .dropdown-toggle:hover {
-            color: #bdc3c7;
-        }
-
-        .dropdown-arrow {
-            transition: transform 0.2s ease;
-            font-size: 12px;
-        }
-
-        .dropdown-arrow.open {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: #95a5a6;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .dropdown-content.open {
-            max-height: 500px;
-            padding-top: 15px;
-        }
-
-        /* リンクセクション */
-        .links-section {
-            text-align: center;
-        }
-
-        .links-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .link-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: transparent;
-            color: #ecf0f1;
-            text-decoration: none;
-            border: 2px solid #7f8c8d;
-            border-radius: 4px;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .link-button:hover {
-            background: #34495e;
-            border-color: #95a5a6;
-        }
-
-        /* レスポンシブ対応 */
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section h2 {
-                font-size: 28px;
-            }
-
-            .profile-text h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- 自己紹介セクション -->
         <section class="profile-section">
-            <div class="profile-icon">👤</div>
+            <div class="profile-icon">
+                <img src="imgs/profile.png" alt="Profile Picture">
+            </div>
             <div class="profile-text">
                 <h1>Taiyo Akita</h1>
                 <p class="subtitle">Japan, Tokyo</p>
                 <p>
-                   東京大学数学科に在学しています。計算機系の授業ばかり取っています。
-                   授業でpythonを多用していて、その経験を活かしてWeb開発を行っています。主にPython / Flaskで開発を行っています。
-                   主にクライミング大会の運営システムを受注し、構築・運営していました。クリエイティブな活動と、体を動かすことと、布団が好きです。
+                   東京大学数学科に在学していますが、計算機系の授業ばかり取っています。
+                   授業でPythonを多用していて、その経験を活かしてWeb開発を行っています。Python / Flaskで開発を行うことが多いですが、他の言語・フレームワークもかじっています。
+                   主にクライミング大会の運営システムを受注し、構築・運営していました。クリエイティブな活動と、体を動かすことが好きです。
                 </p>
             </div>
         </section>
@@ -228,7 +31,7 @@
                 <!-- プロジェクト1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="imgs/arc2025.jpg" alt="Climbing Day 2025 Logo" style ="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="imgs/arc2025.jpg" alt="Climbing Day 2025 Logo" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Climbing Day 2025</h3>
@@ -238,19 +41,21 @@
                                 <span class="dropdown-arrow">▼</span>
                             </div>
                             <div class="dropdown-content">
-                                2025/12/02に開催されたARC'TERIX社協賛のクライミング大会「Climbing Day 2025」の運営システムです。
+                                2025/12/02に開催されたARC'TERIX社協賛のクライミング大会
+                                <a href="https://arcteryx.jp/pages/climbing_day_at_ogikubo_20251129">"Climbing Day 2025"</a>
+                                の運営システムです。
                                 大会参加者の登録、受付、成績管理、結果発表までを一元管理するシステムをFlaskで開発しました。
                                 大会当日は約60名の参加者がスムーズに受付を行い、リアルタイムで成績が更新されるなど、円滑な運営に貢献しました。
                                 <br><br>
                                 〇githubリポジトリ
                                 <br>
-                                <a href="https://github.com/rainyt4iyo/arc2025">Go to GitHub Repository</a>
+                                <a href="https://github.com/rainyt4iyo/arc2025">https://github.com/rainyt4iyo/arc2025</a>
                                 <br>
                                 〇技術スタック
                                 <br>
                                 ・バックエンド
                                 <br>
-                                Python 3.11.7
+                                Python 3.14.0
                                 <br>
                                 Flask: Webフレームワーク
                                 <br>
@@ -278,16 +83,51 @@
 
                 <!-- プロジェクト2 -->
                 <div class="project-card">
-                    <div class="project-image">💻</div>
+                    <div class="project-image">
+                        <img src="imgs/the1.png" alt="the1 logo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">プロジェクト名2</h3>
+                        <h3 class="project-title">THE|1 "GIVE IT EVERYTHING"</h3>
                         <div class="project-dropdown" onclick="toggleDropdown(this)">
                             <div class="dropdown-toggle">
-                                <span>詳細を見る</span>
+                                <span>詳細</span>
                                 <span class="dropdown-arrow">▼</span>
                             </div>
                             <div class="dropdown-content">
-                                ここにプロジェクトの説明文を記載します。使用した技術、開発期間、工夫した点などを詳しく書くことができます。
+                                2025年11月に開催されたADIDAS TERREX協賛のクライミング大会
+                                <a href="https://pump-climbing.com/gym/bpump/category/the1-give-it-everything-vol-4-supported-by-adidasterrex/">"THE|1 - GIVE IT EVERYTHING"</a>
+                                の運営システムです。
+                                大会参加者の登録、受付、成績管理などを一元管理するシステムをFlaskで開発しました。
+                                大会当日は約80名の選手がスムーズに受付を行い、150人を超える観客がリアルタイムで成績を確認できるなど、大会を盛り上げることに大きく貢献できました。
+                                <br>
+                                <br>
+                                〇ページリンク
+                                <br>
+                                <a href="https://the1.kaiz.jp">https://the1.kaiz.jp</a>
+                                <br>
+                                〇技術スタック
+                                <br>
+                                ・バックエンド
+                                <br>
+                                Python 3.11.7
+                                <br>
+                                Flask: Webフレームワーク
+                                <br>
+                                PyMySQL: MySQL データベース接続
+                                <br><br>
+
+                                ・データベース
+                                <br>
+                                MySQL: メインデータベース
+                                <br>
+                                <br>
+                                ・Excelからの情報取り込み
+                                <br>
+                                openpyxl: Excelファイル操作
+                                <br><br>
+                                ・フロントエンド
+                                <br>
+                                HTML / CSS
                             </div>
                         </div>
                     </div>
@@ -295,16 +135,46 @@
 
                 <!-- プロジェクト3 -->
                 <div class="project-card">
-                    <div class="project-image">🎨</div>
+                    <div class="project-image">
+                        <img src="imgs/the3.jpg" alt="The 3 Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">プロジェクト名3</h3>
+                        <h3 class="project-title">THE|3 "UNION IS STRENGTH"</h3>
                         <div class="project-dropdown" onclick="toggleDropdown(this)">
                             <div class="dropdown-toggle">
-                                <span>詳細を見る</span>
+                                <span>詳細</span>
                                 <span class="dropdown-arrow">▼</span>
                             </div>
                             <div class="dropdown-content">
-                                ここにプロジェクトの説明文を記載します。使用した技術、開発期間、工夫した点などを詳しく書くことができます。
+                                2025/08/09,10に開催されたチーム制のクライミング大会
+                                <a href="https://pump-climbing.com/gym/bpump/%e3%80%90entry%e3%80%91the-3-union-is-strength-vol-4/">"THE|3 - UNION IS STRENGTH"</a>
+                                の運営システムです。3人1組で競う形式の大会で、チームごとの成績管理やリアルタイムの結果発表を行うシステムをFlaskで開発しました。
+                                二日間で計200人もの参加者が利用し、リアルタイムで順位を確認できるシステムによって大会の盛り上がりに大きく貢献することができました。
+                                <br><br>
+                                〇ページリンク
+                                <br>
+                                <a href="https://the3.kaiz.jp">https://the3.kaiz.jp</a>
+                                <br>
+                                <br>
+                                〇技術スタック
+                                <br>
+                                ・バックエンド
+                                <br>
+                                Python 3.11.4
+                                <br>
+                                Flask: Webフレームワーク
+                                <br>
+                                PyMySQL: MySQL データベース接続
+                                <br><br>
+
+                                ・データベース
+                                <br>
+                                MySQL: メインデータベース
+                                <br>
+                                <br>
+                                ・フロントエンド
+                                <br>
+                                HTML / CSS
                             </div>
                         </div>
                     </div>
@@ -312,16 +182,40 @@
 
                 <!-- プロジェクト4 -->
                 <div class="project-card">
-                    <div class="project-image">⚡</div>
+                    <div class="project-image">
+                        <img src="imgs/the101.jpg" alt="The101" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">プロジェクト名4</h3>
+                        <h3 class="project-title">THE101 -TAKE A STEP FORWARD- Vol.4</h3>
                         <div class="project-dropdown" onclick="toggleDropdown(this)">
                             <div class="dropdown-toggle">
-                                <span>詳細を見る</span>
+                                <span>詳細</span>
                                 <span class="dropdown-arrow">▼</span>
                             </div>
                             <div class="dropdown-content">
-                                ここにプロジェクトの説明文を記載します。使用した技術、開発期間、工夫した点などを詳しく書くことができます。
+                                2025/05/03に開催されたチーム制のクライミング大会
+                                <a href="https://pump-climbing.com/gym/bpump/%e3%80%90%e9%96%8b%e5%82%ac%e7%99%ba%e8%a1%a8%e3%80%91the101-take-a-step-forward-vol-4/">"THE101 -TAKE A STEP FORWARD- Vol.4"</a>
+                                の集計システムです。
+                                これまでは手動で行っていた成績集計を画像認識で自動化し、即座にデータをExcel上に反映させるシステムを構築しました。
+                                1時間以上かかっていた集計作業を数分に短縮し、大会運営の効率化に大きく貢献しました。
+                                <br><br>
+                                〇githubリポジトリ
+                                <br>
+                                <a href="https://github.com/rainyt4iyo/the101">https://github.com/rainyt4iyo/the101</a>
+                                <br>
+                                <br>
+                                〇技術スタック
+                                <br>
+                                Python 3.11.4
+                                <br>
+                                <br>
+                                ・画像処理
+                                <br>
+                                OpenCV: 画像認識、処理
+                                <br>
+                                aruco: マーカー検出
+                                <br><br>
+                                openpyxl: Excelファイル操作
                             </div>
                         </div>
                     </div>
@@ -333,10 +227,8 @@
         <section class="links-section">
             <h2>CONTACT</h2>
             <div class="links-grid">
-                <a href="https://github.com/yourusername" class="link-button">GitHub</a>
-                <a href="https://twitter.com/yourusername" class="link-button">Twitter</a>
-                <a href="mailto:your@email.com" class="link-button">Email</a>
-                <a href="https://your-blog.com" class="link-button">Blog</a>
+                <a href="https://github.com/rainyt4iyo" class="link-button">GitHub</a>
+                <a href="mailto:taiyo_akita@outlook.com" class="link-button">Email</a>
             </div>
         </section>
     </div>
