@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #2c3e50;
+    color: #ecf0f1;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* セクション共通スタイル */
+section {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ecf0f1;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* 自己紹介セクション */
+.profile-section {
+    text-align: center;
+}
+
+.profile-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #34495e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    border: 3px solid #7f8c8d;
+}
+
+.profile-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #ecf0f1;
+}
+
+.profile-text .subtitle {
+    color: #95a5a6;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.profile-text p {
+    color: #bdc3c7;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* プロジェクトセクション */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.project-card {
+    background: #34495e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border-bottom: 1px solid #7f8c8d;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+.project-dropdown {
+    cursor: pointer;
+    user-select: none;
+}
+
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    color: #95a5a6;
+    font-size: 14px;
+    border-top: 1px solid #7f8c8d;
+}
+
+.dropdown-toggle:hover {
+    color: #bdc3c7;
+}
+
+.dropdown-arrow {
+    transition: transform 0.2s ease;
+    font-size: 12px;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: #95a5a6;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.dropdown-content.open {
+    max-height: 500px;
+    padding-top: 15px;
+}
+
+/* リンクセクション */
+.links-section {
+    text-align: center;
+}
+
+.links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    color: #ecf0f1;
+    text-decoration: none;
+    border: 2px solid #7f8c8d;
+    border-radius: 4px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.link-button:hover {
+    background: #34495e;
+    border-color: #95a5a6;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .profile-text h1 {
+        font-size: 28px;
+    }
+}
